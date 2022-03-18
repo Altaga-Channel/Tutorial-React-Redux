@@ -26,15 +26,15 @@ export const search_Request_Error = (error) => {
     }
 }
 
-const search_action = (value) =>
-{
+const search_action = (value) => {
+    console.log(value)
     return (dispatch) => {
         dispatch(search_Request());
         Axios.get(`http://worldtimeapi.org/api/ip`) //${value} if you want insert value into URL 
-            .then(response =>{
+            .then(response => {
                 dispatch(search_Request_Success(response.data));
             })
-            .catch(error =>{
+            .catch(error => {
                 dispatch(search_Request_Error(error))
             })
     }

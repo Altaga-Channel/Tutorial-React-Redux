@@ -1,9 +1,9 @@
 import { combineReducers } from "redux"
-import {my_counter} from "./syncReducers/myReducer"
+import counter from "./syncReducers/counterReducer"
 import search from "./asyncReducers/searchReducer";
 
 const rootReducers = combineReducers({
-    my_counter,
+    counter,
     search
 })
 

@@ -4,7 +4,7 @@ import search_action from "../redux/actions/asyncActions/searchAction"
 
 class SearchTool extends Component {
     componentDidMount(){
-        this.props.search_action("Hello world") 
+        this.props.search_action("First time"); 
     }
     render() {
         return (
@@ -13,7 +13,7 @@ class SearchTool extends Component {
                 {this.props.search.result.utc_datetime}
                 </div>
                 {" "}
-                <button style={{ fontSize: "1.6rem", color: "black" }} className="btn btn-danger" onClick={() => this.props.search_action("Hello world")}>
+                <button style={{ fontSize: "1.6rem", color: "black" }} className="btn btn-danger" onClick={() => this.props.search_action("Second time")}>
                     Update Date
                 </button>
             </div>

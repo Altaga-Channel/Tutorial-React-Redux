@@ -2,33 +2,33 @@ import { SEARCH_REQUEST, SEARCH_REQUEST_SUCCESS, SEARCH_REQUEST_ERROR } from "..
 
 const default_state = {
     loading: false,
-    result:'',
-    error:'',
-    extra_data:"Hello World!"
+    result: '',
+    error: '',
+    extra_data: "Hello World!"
 }
 
-const search = (state = default_state, action) =>{
+const search = (state = default_state, action) => {
     switch (action.type) {
         case SEARCH_REQUEST: {
-            return{
+            return {
                 ...state, // Keep all state and olny modify counter
-                loading:true
+                loading: true
             }
         }
         case SEARCH_REQUEST_SUCCESS: {
-            return{
+            return {
                 ...state, // Keep all state and olny modify counter
-                loading:false,
-                result:action.payload,
-                error:''
+                loading: false,
+                result: action.payload,
+                error: ''
             }
         }
         case SEARCH_REQUEST_ERROR: {
-            return{
+            return {
                 ...state, // Keep all state and olny modify counter
-                loading:false,
-                result:'',
-                error:action.payload
+                loading: false,
+                result: '',
+                error: action.payload
             }
         }
         default: return state;

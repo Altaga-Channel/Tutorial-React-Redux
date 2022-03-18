@@ -1,11 +1,11 @@
-import { COUNTER_DOWN, COUNTER_UP } from "../../actions/syncActions/myActions";
+import { COUNTER_DOWN, COUNTER_UP } from "../../actions/syncActions//counterAction";
 
 const default_state = {
     counter: 10,
     extra_data:"Hello World!"
 }
 
-export const my_counter = (state = default_state, action) => {
+const counter = (state = default_state, action) => {
     switch (action.type) {
         case COUNTER_DOWN: {
             if(state.counter===0)
@@ -41,3 +41,5 @@ export const my_counter = (state = default_state, action) => {
         default: return state;
     }
 }
+
+export default counter;

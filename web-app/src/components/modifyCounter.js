@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { counter_down_action, counter_up_action } from "../redux/actions/syncActions/myActions"
+import { counter_down_action, counter_up_action } from "../redux/actions/syncActions/counterAction";
 
 class ModCounter extends Component {
     render() {

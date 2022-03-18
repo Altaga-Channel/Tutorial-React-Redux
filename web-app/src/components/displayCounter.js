@@ -6,7 +6,7 @@ class DisCounter extends Component {
     render() {
         return (
             <div>
-                Counter state {this.props.my_counter.counter}
+                Counter state {this.props.counter.counter}
             </div>
         );
     }
@@ -14,7 +14,7 @@ class DisCounter extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        my_counter:state.my_counter
+        counter:state.counter
     }
 }
 
